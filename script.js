@@ -69,6 +69,7 @@
 //     }
 // });
 
+// Access DOM elements
 const wishButton = document.getElementById("wishButton");
 const wishContainer = document.getElementById("wishContainer");
 const wishText = document.getElementById("wishText");
@@ -81,15 +82,8 @@ const messages = [
     "Happy Birthday To My One Of The Bestest Friend, May Your Life Be Full of Joy And Happiness 😊😊",
     "I Pray to God To Fulfill All Of Your Dreams 🙏✨",
     "Enjoy The Day And Party As Much As You Can 🎉🎈",
-    "And A SORRY!! For Not Being Physically Present To Wish You 🎂🎁"
-];
-
-// Define the corresponding images for each step (update these URLs with the actual photo URLs)
-const personImages = [
-    'images/person_photo1.jpg', // Replace with actual URL
-    'images/person_photo2.jpg', 
-    'images/person_photo3.jpg', 
-    'images/person_photo4.jpg'
+    "And A SORRY!! For Not Being Physically Present To Wish You 🎂🎁",
+    "I Am Always There For You, Your Friend Aarav 💖😊"
 ];
 
 let step = 0;
@@ -101,11 +95,6 @@ function showMessage(index) {
     setTimeout(() => {
         wishText.textContent = messages[index];
         wishText.classList.add("show");
-        
-        // Update the person image and log the src to debug
-        personImage.src = personImages[index]; 
-        console.log(`Image source updated to: ${personImage.src}`);
-        personImage.classList.remove("hidden");
     }, 300);
 }
 
@@ -118,18 +107,15 @@ function createEmojis() {
         emoji.classList.add("emoji");
         emoji.textContent = emojiArray[Math.floor(Math.random() * emojiArray.length)];
 
-        // Random size between 40px and 60px
         const size = Math.random() * 20 + 40 + "px";
         emoji.style.fontSize = size;
         
-        // Random horizontal position
         emoji.style.left = Math.random() * 100 + "vw";
-        // Start from bottom of the screen
         emoji.style.top = "100vh";
         
         emojiContainer.appendChild(emoji);
 
-        // Remove emoji after animation duration (6s)
+        // Remove the emoji after animation duration
         setTimeout(() => {
             emoji.remove();
         }, 6000);
@@ -139,7 +125,7 @@ function createEmojis() {
 // Event listener for the "Click Me" button
 wishButton.addEventListener("click", function() {
     if (step === 0) {
-        // Play the birthday song
+        // Play the birthday song on the first click
         birthdaySong.play();
         
         // Show the wish container
@@ -148,15 +134,18 @@ wishButton.addEventListener("click", function() {
         // Display the first message
         showMessage(step);
         
+        // Show the image
+        personImage.classList.remove("hidden");
+        
         // Start floating emojis
         createEmojis();
         
-        // Change button text to "Next" after the first click
+        // Change the button text to "Next"
         wishButton.textContent = "Next";
         
         step++;
     } else if (step < messages.length) {
-        // Display the next message and change the photo
+        // Display the next message
         showMessage(step);
         step++;
     }
@@ -165,6 +154,6 @@ wishButton.addEventListener("click", function() {
     if (step === messages.length) {
         setTimeout(() => {
             wishButton.classList.add("hidden");
-        }, 1000); // Delay to let the final message display before the button disappears
+        }, 1000); // Delay for the final message before hiding the button
     }
 });

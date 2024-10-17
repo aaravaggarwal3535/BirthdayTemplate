@@ -8,7 +8,6 @@ const messages = [
     "Happy Birthday To My One Of The Bestest Friend, May Your Life Be Full of Joy And Happiness 😊😊",
     "I Pray to God To Fulfill All Of Your Dreams 🙏✨",
     "Enjoy The Day And Party As Much As You Can 🎉🎈",
-    "And A SORRY!! For Not Being Physically Present To Wish You 🎂🎁",
     "I Am Always There For You, Your Freind Aarav 💖😊"
 ];
 

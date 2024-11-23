@@ -5,7 +5,7 @@ const personImage = document.getElementById("personImage");
 const emojiContainer = document.getElementById("emojiContainer");
 const birthdaySong = document.getElementById("birthdaySong");
 const messages = [
-    "Ram Ram bhai Happy Birthday"
+    "Ram Ram bhai Happy Birthday",
     "May Your Life Be Full of Joy And Happiness bro 😊😊",
     "I Pray to God To Fulfill All Of Your Dreams 🙏✨",
     "Enjoy The Day And Party As Much As You Can 🎉🎈",

@@ -7,7 +7,7 @@ const birthdaySong = document.getElementById("birthdaySong");
 const messages = [
     "Ram Ram bhai Happy Birthday",
     "May Your Life Be Full of Joy And Happiness bro 😊😊",
-    "I Pray to God To Fulfill All Of Your Dreams 🙏✨",
+    "I Pray to God To Fulfill All Your Dreams 🙏✨",
     "Enjoy The Day And Party As Much As You Can 🎉🎈",
     "I Am Always There For You,Tera bhai Aarav 💖😊"
 ];
